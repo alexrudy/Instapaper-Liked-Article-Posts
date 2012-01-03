@@ -28,8 +28,8 @@ License: GPL2
 /*  The stuff we only want to do as an admin. */
 if ( is_admin() ){
     /*  Things happen when we activate and deactivate the plugin of course. */
-    register_activation_hook( __FILE__, 'ilap_plugin_activation' );
-    register_deactivation_hook( __FILE__, 'ilap_plugin_deactivation' );
+    register_activation_hook('Instapaper-Liked-Article-Posts/instapaper-liked-article-posts.php', 'ilap_plugin_activation' );
+    register_deactivation_hook('Instapaper-Liked-Article-Posts/instapaper-liked-article-posts.php', 'ilap_plugin_deactivation' );
 
     /*  Add a fancy icon to the custom post type page in wp-admin. */
     add_action( 'admin_head', 'ilap_edit_icon' );
